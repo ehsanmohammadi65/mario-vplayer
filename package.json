@@ -1,6 +1,6 @@
 {
   "name": "mario-vplayer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A responsive video player component for Vue 3 ",
   "main": "dist/mario-vplayer.umd.js",
   "module": "dist/mario-vplayer.es.js",
