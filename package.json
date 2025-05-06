@@ -1,0 +1,23 @@
+{
+  "name": "mario-vplayer",
+  "version": "1.0.1",
+  "author": "Ehsan Mohammadi <xyxyxyxy16@gmail.com> ",
+  "description": "A responsive video player component for Vue 3 with Tailwind CSS",
+  "main": "dist/mario-vplayer.umd.js",
+  "module": "dist/mario-vplayer.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.4"
+  }
+}
