@@ -105,10 +105,7 @@ const j = {
         }, null, 8, G)
       ], 512),
       o("div", {
-        class: p(["controls-container", [
-          l.value ? "fullscreen-controls" : "",
-          l.value && !f.value ? "hidden" : ""
-        ]])
+        class: p(["controls-container", [l.value ? "fullscreen-controls" : "", l.value && !f.value ? "hidden" : ""]])
       }, [
         o("div", {
           class: p(["progress-bar", l.value ? "fullscreen-progress" : ""])

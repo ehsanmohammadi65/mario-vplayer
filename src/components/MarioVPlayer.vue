@@ -206,6 +206,7 @@ onUnmounted(() => {
     class="video-player-container"
     ref="videoContainer"
   >
+    <!-- متن نمایش داده شده -->
     <div class="text-overlay" dir="ltr">{{ props.code }}</div>
 
     <video
@@ -219,12 +220,10 @@ onUnmounted(() => {
       <source :src="props.video" type="video/mp4" />
     </video>
 
+    <!-- کنترل‌ها -->
     <div
       class="controls-container"
-      :class="[
-        FullscreenIs ? 'fullscreen-controls' : '',
-        FullscreenIs && !controlsVisible ? 'hidden' : ''
-      ]"
+      :class="[FullscreenIs ? 'fullscreen-controls' : '', FullscreenIs && !controlsVisible ? 'hidden' : '']"
     >
       <div
         class="progress-bar"
@@ -270,8 +269,21 @@ onUnmounted(() => {
 }
 
 .text-overlay {
-  color: black;
+  color: white;
   position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.5rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.fullscreen-video .text-overlay {
+  font-size: 2rem;
+  top: 20px;
+  left: 20px;
 }
 
 video {
@@ -298,58 +310,57 @@ video {
   left: 0;
   right: 0;
   background: rgba(31, 41, 55, 0.5);
-  backdrop-filter: blur(10px
-);
--webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .controls-container.hidden {
-opacity: 0;
+  opacity: 0;
 }
 
 .progress-bar {
-display: flex;
-align-items: center;
-padding: 0 0.5rem;
-background-color: rgba(31, 41, 55, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  background-color: rgba(31, 41, 55, 0.5);
 }
 
 .fullscreen-progress {
-padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 #progress {
-flex: 1;
-height: 0.5rem;
-margin: 0 0.5rem;
-cursor: pointer;
+  flex: 1;
+  height: 0.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
 }
 
 .buttons-bar {
-display: flex;
-justify-content: space-between;
-padding: 0 0.5rem;
-background-color: rgba(31, 41, 55, 0.5);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  background-color: rgba(31, 41, 55, 0.5);
 }
 
 .fullscreen-buttons {
-padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .buttons-bar button {
-color: white;
-padding: 0.25rem 0;
-background: none;
-border: none;
-font-size: 1rem;
-cursor: pointer;
+  color: white;
+  padding: 0.25rem 0;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .text-white {
-color: white;
+  color: white;
 }
 
 .text-sm {
-font-size: 0.875rem;
+  font-size: 0.875rem;
 }
 </style>
